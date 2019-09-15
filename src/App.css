@@ -1,0 +1,10 @@
+.App {
+  text-align: center;
+background: linear-gradient(45deg, rgba(29,28,32,1) 11%, rgba(0,0,0,1) 49%, rgba(8,7,23,1) 88%);
+width:100%;
+}
+
+
+.ttt{
+	color:#565;
+}

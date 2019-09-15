@@ -1,0 +1,21 @@
+.mainInfo{
+	text-align: left;
+	color:#c36679;
+	margin:auto;
+	max-width: 700px;
+}
+
+.title{
+	color:#e2abc7;
+}
+
+.cpuname, .cputime, .majorInfo{
+	display: grid;
+	max-width: 400px;
+	grid-auto-columns: 100px;
+	grid-template-columns: auto 200px;
+	grid-auto-flow: row;
+	grid-gap: 10px;
+}
+
+
