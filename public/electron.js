@@ -6,6 +6,7 @@ const path = require("path");
 const isDev = require("electron-is-dev");
 
 const os  = require('os');
+const osu = require('node-os-utils');
 
 let mainWindow;
 
@@ -35,7 +36,7 @@ function createWindow() {
   );
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools()
+  //mainWindow.webContents.openDevTools()
 
   
   mainWindow.on("closed", () => (mainWindow = null));

@@ -1,0 +1,60 @@
+.cpus{
+	
+	width:1000px;
+}
+
+.status{
+
+}
+
+.frame{
+
+
+}
+
+.frame *{
+	
+}
+
+.frameCap{
+
+}
+
+.frameCap *{
+
+}
+
+.cpname{
+
+}
+
+th{
+	text-align: center;
+	padding:10px;
+	box-shadow: 0px 0px 2px #fff;
+}
+td{
+	text-align: center;
+	padding:0px 10px;
+	box-shadow: 0px 0px 1px #fff;
+}
+
+
+.cpuTime{
+	margin: 50px 0px 0px 100px !important;
+}
+
+.cool{
+	margin: 10px 0px;
+	box-shadow: 0px 0px 0px #fff;
+	color: #987;
+}
+
+.table{
+	margin:auto !important;
+}
+
+.cpuDet{
+
+	margin:0px 100px;
+}

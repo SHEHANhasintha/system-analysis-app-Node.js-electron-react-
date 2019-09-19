@@ -1,0 +1,29 @@
+.netCaption{
+	color:888;
+}
+
+.network{
+	display:flex;
+	flex-direction: column;
+}
+
+.craft{
+	display: flex;
+	flex-direction: row;
+	flex-basis: 0.5;
+}
+
+.shape{
+	display: flex;
+	flex-direction: column;
+	flex-basis: 0.5;
+	margin: 10px;
+}
+
+.container{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}

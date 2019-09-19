@@ -4,35 +4,55 @@ import './cssFiles/cpuTiming.css';
 const uuid = require("uuid");
 
 class CpusTiming extends Component{
-	constructor(props){
-		super(props);
-		this.state = {
-			timing : this.props.cpuTiming
-		};
 
+	state = {
+		timing : {
+			idle : this.props.cpuTiming.idle,
+			irq : this.props.cpuTiming.irq,
+			nice : this.props.cpuTiming.nice,
+			sys : this.props.cpuTiming.sys,
+			user : this.props.cpuTiming.user
+		},
+
+		eachCpuState : this.props.eachCpuState
+	};
+
+
+	static getDerivedStateFromProps(props){
+		return {
+		timing : {
+			idle : props.cpuTiming.idle,
+			irq : props.cpuTiming.irq,
+			nice : props.cpuTiming.nice,
+			sys : props.cpuTiming.sys,
+			user : props.cpuTiming.user
+		},
+		cpuUp : (props.cpuTiming.idle+props.cpuTiming.sys+props.cpuTiming.user)/(1000*3600),
+		cpuCount : props.cpuCount,
+		cpus : props.cpus,
+		eachCpuState : props.eachCpuState
+		}
 	}
 
-	componentWillMount(){}
 
 
 	render(){
 		return(
-			<div>				
-				<h3 className="cpuTime">CPU Timing</h3> 
-				<dt className="mainInfo cputime">
-						<span>Idle Time </span>				<span>{this.state.timing.idle}</span>
-						<span>Irq time </span>				<span>{this.state.timing.irq}</span>
-						<span>Nice </span>					<span>{this.state.timing.nice}</span>
-						<span>System time </span>			<span>{this.state.timing.sys}</span>
-						<span>User Time </span>				<span>{this.state.timing.user}</span>
-				</dt>
-			</div>
+			<tr>				
+						<td><span>{this.state.eachCpuState*100}%</span></td>
+						<td><span>{this.state.timing.idle}</span></td>
+						<td><span>{this.state.timing.irq}</span></td>
+						<td><span>{this.state.timing.nice}</span></td>
+						<td><span>{this.state.timing.sys}</span></td>
+						<td><span>{this.state.timing.user}</span></td>
+				
+				
+			</tr>
 		)
 	}
 }
 
 export default CpusTiming;
-
 
 
 

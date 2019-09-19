@@ -15,6 +15,7 @@
     "concurrently": "^4.1.2",
     "electron": "^6.0.8",
     "electron-builder": "^21.2.0",
+    "node-os-utils": "^1.0.7",
     "prettier": "^1.18.2",
     "react-dom": "^16.9.0",
     "react-scripts": "^3.1.1",
